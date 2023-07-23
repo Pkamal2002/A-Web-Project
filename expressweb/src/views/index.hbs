@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- logoIconLink -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontAwosem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive-Navbar</title>
+    <link rel="shortcut icon" href="image/weather-icon-png-16.png" type="image/png">
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-snowflake"></i> <a href="/"> Kamal </a><i class="fa-solid fa-snowflake"></i>
+            </div>
+            <ul class="links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/weather">Weather</a></li>
+                <li><a href="/about">About</a></li>
+
+            </ul>
+            <!-- <a href="" class="action-btn">Get Started</a> -->
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+        </div>
+
+        <div class="dropdown-menu ">
+            <li><a href="/">Home</a></li>
+            <li><a href="/weather">Weather</a></li>
+            <li><a href="/about">About</a></li>
+
+            <!-- <li><a href="#" class="action-btn">Get Started</a></li> -->
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <p>Welcome  to weather app</p>
+            <h1> Get the latest weather info of your city</h1>
+            
+            <li><a href="/weather" class="action-btn">Check now</a></li>
+
+           
+        </section>
+      
+    </main>
+     <!-- footer starts -->
+     <footer class="footer">
+        <p>Created with <span class="heart">🧡</span>by Prafull Kamal</p>
+    </footer>
+
+    <script>
+        const togglebtn = document.querySelector('.toggle-btn')
+        const toggleIcon = document.querySelector('.toggle-btn i')
+        const dropdownmenu = document.querySelector('.dropdown-menu')
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle('open')
+
+            const isOpen = dropdownmenu.classList.contains('open')
+
+            toggleIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+
+</html>
